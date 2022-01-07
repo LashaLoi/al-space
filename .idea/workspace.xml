@@ -5,14 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4dabb6a-5240-43d5-aa3a-1eb2d9d9816b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/components/Navigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/components/Navigation/icons.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/context/global.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hooks/useUnMount.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Blog/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/blog.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/cv.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/components/FadeIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/FadeIn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/components/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/Navigation/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/context/theme.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/context/theme.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/Home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Home/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +42,31 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1641233063" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="server-components" />
+                    <option name="lastUsedInstant" value="1641233062" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -70,11 +100,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/modules/" />
+      <recent name="$PROJECT_DIR$/lib/components/Navigation" />
       <recent name="$PROJECT_DIR$/lib/" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/assets" />
-      <recent name="$PROJECT_DIR$/pages" />
-      <recent name="$PROJECT_DIR$/lib/assets/videos" />
     </key>
   </component>
   <component name="RunManager">

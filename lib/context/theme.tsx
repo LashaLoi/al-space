@@ -33,8 +33,6 @@ const getInitialTheme = (): Theme => {
 }
 
 const storeTheme = (theme: Theme) => {
-  console.log('call')
-
   const root = window.document.documentElement
   const isDark = theme === Theme.DARK
 
@@ -76,7 +74,7 @@ export const ThemeProvider: React.FC = ({ children }) => {
 export const useThemeContext = () => useContext<ThemeContext>(ThemeContext)
 
 export const useTheme = () => {
-  const { theme } = useContext<ThemeContext>(ThemeContext)
+  const { theme } = useThemeContext()
 
   const isDark = theme === Theme.DARK
   const isLight = theme === Theme.LIGHT
@@ -92,7 +90,7 @@ export const useTheme = () => {
 }
 
 export const useThemeApi = () => {
-  const { theme, changeTheme } = useContext<ThemeContext>(ThemeContext)
+  const { theme, changeTheme } = useThemeContext()
 
   const setLightTheme = useCallback(
     () => changeTheme(Theme.LIGHT),
@@ -101,10 +99,7 @@ export const useThemeApi = () => {
   const setDarkTheme = useCallback(() => changeTheme(Theme.DARK), [changeTheme])
   const toggleTheme = useCallback(() => {
     const isDark = Theme.DARK === theme
-
     const newTheme = isDark ? Theme.LIGHT : Theme.DARK
-
-    console.log({ theme, newTheme })
 
     changeTheme(newTheme)
   }, [theme, changeTheme])

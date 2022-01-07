@@ -4,12 +4,14 @@ import { animated, useSpring, config } from 'react-spring'
 type FadeInProps = {
   delay?: number
   className?: string
+  stop?: boolean
 }
 
 export const FadeIn: React.FC<FadeInProps> = ({
   children,
   delay = 600,
   className,
+  stop = false,
 }) => {
   const props = useSpring({
     from: {
@@ -23,7 +25,7 @@ export const FadeIn: React.FC<FadeInProps> = ({
   })
 
   return (
-    <animated.div style={props} className={className}>
+    <animated.div style={stop ? undefined : props} className={className}>
       {children}
     </animated.div>
   )

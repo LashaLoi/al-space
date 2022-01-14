@@ -9,37 +9,32 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
-  @apply dark:bg-black dark:text-white;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  @apply dark:bg-stone-900 dark:text-white text-gray-800 transition-all w-full h-full;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.container {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  justify-content: center;
-}
+/*.container {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  height: 100%;*/
+/*  justify-content: center;*/
+/*}*/
 
-.trailsText {
-  position: relative;
-  width: 100%;
-  height: 80px;
-  margin-top: -15px;
-  color: white;
-  font-size: 4em;
-  font-weight: 800;
-  will-change: transform, opacity;
-}
+/*.trailsText {*/
+/*  position: relative;*/
+/*  width: 100%;*/
+/*  height: 80px;*/
+/*  margin-top: -15px;*/
+/*  color: white;*/
+/*  font-size: 4em;*/
+/*  font-weight: 800;*/
+/*  will-change: transform, opacity;*/
+/*}*/
 
-.trailsText > div {
-  padding-right: 0.05em;
-  overflow: hidden;
-}
+/*.trailsText > div {*/
+/*  padding-right: 0.05em;*/
+/*  overflow: hidden;*/
+/*}*/

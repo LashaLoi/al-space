@@ -5,20 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4dabb6a-5240-43d5-aa3a-1eb2d9d9816b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/components/Navigation/icons.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/context/global.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/hooks/useUnMount.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Blog/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/blog.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/cv.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/FadeIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/FadeIn.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/Navigation/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/context/theme.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/context/theme.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Home/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/components/Navigation/icons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/Navigation/icons.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/components/Navigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/Navigation/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Blog/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Blog/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/blog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blog.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

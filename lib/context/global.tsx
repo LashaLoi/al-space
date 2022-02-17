@@ -84,10 +84,15 @@ export const useGlobalStateApi = () => {
     handleAddPage(Page.HOME)
   }, [handleAddPage])
 
+  const addBlogPage = useCallback(() => {
+    handleAddPage(Page.BLOG)
+  }, [handleAddPage])
+
   return useMemo(
     () => ({
       addPage: handleAddPage,
       addHomePage,
+      addBlogPage,
     }),
     [addPage]
   )

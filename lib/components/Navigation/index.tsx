@@ -43,13 +43,13 @@ const Navigation: React.FC = () => {
 
   return (
     <div
-      className={`absolute flex justify-between w-full h-[10px] sm:top-6 sm:px-10 px-4 bottom-6 ${
+      className={`fixed flex justify-between w-full h-[10px] sm:top-6 sm:px-10 px-4 bottom-6 ${
         isHomePage ? 'text-white' : ''
       }`}
     >
       <div className="flex w-full sm:justify-start justify-between">
         {pages.map((page) => (
-          <Link href={page.link}>
+          <Link href={page.link} key={page.link}>
             <a className="flex justify-center items-center w-6 h-6 sm:mr-10 mr-0">
               {isDark ? page.lightIcon : page.darkIcon}
             </a>

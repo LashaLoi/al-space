@@ -5,12 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4dabb6a-5240-43d5-aa3a-1eb2d9d9816b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/al-space.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Blog/Articles/Post.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Blog/Articles/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/Navigation/icons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/Navigation/icons.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/components/Navigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/Navigation/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/context/global.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/context/global.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/Blog/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Blog/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/blog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +66,14 @@
       </RecentBranches>
     </option>
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="8c57932d-b2c4-4f09-ba15-d55869bd1f61" />
+        <option name="url" value="https://github.com/LashaLoi/al-space.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -87,7 +101,7 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -119,6 +133,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1640335379177</updated>
+      <workItem from="1644663507304" duration="2050000" />
+      <workItem from="1644824601085" duration="2000" />
+      <workItem from="1645083703159" duration="61000" />
     </task>
     <servers />
   </component>

@@ -6,6 +6,10 @@ import { useRouter } from 'next/router'
 import { animated, useSpring } from 'react-spring'
 
 import { FadeIn } from 'lib/components/FadeIn'
+import { useGlobalState, useGlobalStateApi } from 'lib/context/global'
+
+import Articles from './Articles'
+import { useUnMount } from '../../lib/hooks/useUnMount'
 
 const ArrawLeft: React.FC = () => (
   <svg
@@ -23,6 +27,8 @@ const ArrawLeft: React.FC = () => (
 )
 
 const Blog: React.FC = () => {
+  const { isBlogMounted } = useGlobalState()
+  const { addBlogPage } = useGlobalStateApi()
   const router = useRouter()
   const style = useSpring({
     from: {
@@ -34,16 +40,18 @@ const Blog: React.FC = () => {
     delay: 400,
   })
 
+  useUnMount(addBlogPage)
+
   const handleBack = useCallback(router.back, [])
 
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="lg:lg:w-2/5 md:w-3/5 sm:w-5/6 w-full sm:p-0 p-4">
         <div className="flex justify-between items-center">
-          <FadeIn delay={200}>
+          <FadeIn delay={200} stop={isBlogMounted}>
             <div className="sm:text-4xl text-2xl">BLOG</div>
           </FadeIn>
-          <FadeIn delay={300}>
+          <FadeIn delay={300} stop={isBlogMounted}>
             <button
               onClick={handleBack}
               className="text-slate-400 flex items-center"
@@ -53,10 +61,10 @@ const Blog: React.FC = () => {
           </FadeIn>
         </div>
         <animated.div
-          style={style}
+          style={isBlogMounted ? undefined : style}
           className="w-full bg-red-400 h-[1px] mt-2"
         />
-        <FadeIn delay={300}>
+        <FadeIn delay={300} stop={isBlogMounted}>
           <div className="mt-6 flex items-center">
             <div className="sm:mr-8 mr-4">
               <Image
@@ -83,6 +91,9 @@ const Blog: React.FC = () => {
               <div className="">I explain with words and code.</div>
             </div>
           </div>
+        </FadeIn>
+        <FadeIn delay={400} stop={isBlogMounted}>
+          <Articles />
         </FadeIn>
       </div>
     </div>

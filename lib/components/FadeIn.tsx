@@ -1,32 +1,34 @@
 import React from 'react'
-import { animated, useSpring, config } from 'react-spring'
+import { motion } from 'framer-motion'
 
-type FadeInProps = {
+const variants = {
+  init: {
+    opacity: 0,
+  },
+  out: {
+    opacity: 1,
+  },
+}
+
+interface FadeInProps {
   delay?: number
   className?: string
-  stop?: boolean
 }
 
 export const FadeIn: React.FC<FadeInProps> = ({
   children,
-  delay = 600,
+  delay = 0.6,
   className,
-  stop = false,
-}) => {
-  const props = useSpring({
-    from: {
-      opacity: 0,
-    },
-    to: {
-      opacity: 1,
-    },
-    delay,
-    config: config.molasses,
-  })
-
-  return (
-    <animated.div style={stop ? undefined : props} className={className}>
-      {children}
-    </animated.div>
-  )
-}
+}) => (
+  <motion.div
+    initial="init"
+    animate="out"
+    variants={variants}
+    transition={{
+      delay,
+    }}
+    className={className}
+  >
+    {children}
+  </motion.div>
+)

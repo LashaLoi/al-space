@@ -1,17 +1,13 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-
+import { SEOHead } from '@seo/head'
 import { Home } from '@modules/Home'
+import { PageWrapper } from '@components/PageWrapper'
 
 const HomePage: NextPage = () => (
-  <>
-    <Head>
-      <title>AL SPACE</title>
-      <meta name="description" content="All info about Aliaksei Loi" />
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+  <PageWrapper>
+    <SEOHead />
     <Home />
-  </>
+  </PageWrapper>
 )
 
 export default HomePage

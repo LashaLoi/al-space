@@ -1,24 +1,52 @@
 import React, { memo } from 'react'
+import { motion } from 'framer-motion'
+import { BlogPost } from '@graphql/index'
+import { formatDate } from '@utils/index'
 
-interface PostProps {}
+interface PostProps extends BlogPost {}
 
-export const PostComponent: React.FC<PostProps> = () => {
-  return (
-    <div className="mb-14">
-      <div className="text-3xl text-red-400 font-bold">
-        npm audit: Broken by Design
-      </div>
-      <div className="flex align-center  mt-2 text-sm">
-        <div className="mr-2">July 7, 2021</div>
-        <div>-</div>
-        <div className="ml-2">14 min read</div>
-      </div>
-      <p className="text-lg mt-1">
-        Found 99 vulnerabilities (84 moderately irrelevant, 15 highly
-        irrelevant)
-      </p>
-    </div>
-  )
+const monthNames = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+]
+
+const item = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
 }
 
-export const Post = memo(PostComponent)
+export const Post: React.FC<PostProps> = ({
+  description,
+  read,
+  title,
+  updatedAt,
+  body,
+}) => {
+  const date = formatDate(updatedAt)
+
+  console.log({ body })
+
+  return (
+    <motion.div variants={item} className="mb-14">
+      <div className="sm:text-3xl text-xl text-red-400 font-bold cursor-pointer">
+        {title}
+      </div>
+      <div className="flex align-center mt-2 sm:text-sm text-xs">
+        <div className="mr-2">{date}</div>
+        <div>-</div>
+        <div className="ml-2">{read} min read</div>
+      </div>
+      <p className="sm:text-lg text-base mt-2">{description}</p>
+    </motion.div>
+  )
+}

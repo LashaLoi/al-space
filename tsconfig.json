@@ -16,8 +16,11 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
+      "@modules/*": ["modules/*"],
       "@components/*": ["lib/components/*"],
-      "@modules/*": ["modules/*"]
+      "@seo/*": ["lib/seo/*"],
+      "@graphql/*": ["lib/graphql/*"],
+      "@utils/*": ["lib/utils/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

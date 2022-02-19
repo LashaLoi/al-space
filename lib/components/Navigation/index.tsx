@@ -43,8 +43,10 @@ const Navigation: React.FC = () => {
 
   return (
     <div
-      className={`fixed flex justify-between w-full h-[10px] sm:top-6 sm:px-10 px-4 bottom-6 ${
-        isHomePage ? 'text-white' : ''
+      className={`transition-all fixed flex justify-between items-center w-full mt-2 h-[50px] sm:top-0 sm:px-10 px-4 bottom-0 ${
+        isHomePage
+          ? 'text-white'
+          : 'lg:bg-transparent dark:lg:bg-transparent bg-white dark:bg-stone-900'
       }`}
     >
       <div className="flex w-full sm:justify-start justify-between">

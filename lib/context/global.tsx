@@ -6,36 +6,13 @@ import React, {
   useMemo,
 } from 'react'
 
-enum Page {
-  HOME,
-  CV,
-  BLOG,
-}
+type GlobalStateContext = {}
 
-type GlobalStateContext = {
-  pagesMounted: Array<Page>
-  addPage: (page: Page) => void
-}
-
-const GlobalStateContext = createContext<GlobalStateContext>({
-  pagesMounted: [],
-  addPage: () => {},
-})
+const GlobalStateContext = createContext<GlobalStateContext>({})
 
 export const GlobalStateProvider: React.FC = ({ children }) => {
-  const [pagesMounted, setPagesMounted] = useState<Array<Page>>([])
-
-  const addPage = useCallback((page: Page) => {
-    setPagesMounted((pages) => [...pages, page])
-  }, [])
-
   return (
-    <GlobalStateContext.Provider
-      value={{
-        pagesMounted,
-        addPage,
-      }}
-    >
+    <GlobalStateContext.Provider value={{}}>
       {children}
     </GlobalStateContext.Provider>
   )
@@ -45,55 +22,9 @@ export const useGlobalStateContext = () =>
   useContext<GlobalStateContext>(GlobalStateContext)
 
 export const useGlobalState = () => {
-  const { pagesMounted } = useGlobalStateContext()
-
-  const isHomeMounted = pagesMounted.some((page) => page === Page.HOME)
-  const isCVMounted = pagesMounted.some((page) => page === Page.CV)
-  const isBlogMounted = pagesMounted.some((page) => page === Page.BLOG)
-
-  return useMemo(
-    () => ({
-      pagesMounted,
-      isHomeMounted,
-      isCVMounted,
-      isBlogMounted,
-    }),
-    [pagesMounted, isHomeMounted, isCVMounted, isBlogMounted]
-  )
+  return useMemo(() => ({}), [])
 }
 
 export const useGlobalStateApi = () => {
-  const { pagesMounted, addPage } = useGlobalStateContext()
-
-  const handleAddPage = useCallback(
-    (page: Page) => {
-      const alreadyExists = pagesMounted.some(
-        (mountedPage) => mountedPage === page
-      )
-
-      if (alreadyExists) {
-        return
-      }
-
-      addPage(page)
-    },
-    [addPage]
-  )
-
-  const addHomePage = useCallback(() => {
-    handleAddPage(Page.HOME)
-  }, [handleAddPage])
-
-  const addBlogPage = useCallback(() => {
-    handleAddPage(Page.BLOG)
-  }, [handleAddPage])
-
-  return useMemo(
-    () => ({
-      addPage: handleAddPage,
-      addHomePage,
-      addBlogPage,
-    }),
-    [addPage]
-  )
+  return useMemo(() => ({}), [])
 }

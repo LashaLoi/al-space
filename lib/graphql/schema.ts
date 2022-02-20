@@ -9,6 +9,7 @@ export const BlogPostsQuery = gql`
       description
       updatedAt
       body
+      slug
     }
   }
 `

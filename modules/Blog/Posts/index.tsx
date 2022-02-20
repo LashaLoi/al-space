@@ -1,6 +1,7 @@
-import React, { memo } from 'react'
+import React, { memo, useCallback, useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { BlogPost } from '@graphql/index'
+import { useAudio } from '@hooks/useAudio'
 import { Post } from './Post'
 
 interface ArticlesProps {
@@ -17,17 +18,21 @@ const container = {
   },
 }
 
-const Articles: React.FC<ArticlesProps> = ({ posts }) => (
-  <motion.div
-    variants={container}
-    initial="hidden"
-    animate="show"
-    className="mt-12 w-full"
-  >
-    {posts.map((post) => (
-      <Post key={post.id} {...post} />
-    ))}
-  </motion.div>
-)
+const Articles: React.FC<ArticlesProps> = ({ posts }) => {
+  const playSound = useAudio('/assets/paper.wav')
+
+  return (
+    <motion.div
+      variants={container}
+      initial="hidden"
+      animate="show"
+      className="mt-12 w-full"
+    >
+      {posts.map((post) => (
+        <Post key={post.id} {...post} playSound={playSound} />
+      ))}
+    </motion.div>
+  )
+}
 
 export default memo(Articles)

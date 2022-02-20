@@ -40,7 +40,7 @@ export const Home: React.FC = () => (
           transition={{
             delay: 1.2,
           }}
-          className="mt-2 h-[0.5px] bg-red-400"
+          className="mt-2 h-[0.5px] bg-emerald-400"
         />
       </div>
     </div>

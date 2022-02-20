@@ -3535,7 +3535,7 @@ export enum _SystemDateTimeFieldVariation {
   Localization = 'localization'
 }
 
-export type BlogPostsssQueryVariables = Exact<{ [key: string]: never; }>;
+export type BlogPostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type BlogPostsssQuery = { __typename?: 'Query', blogPosts: Array<{ __typename?: 'BlogPost', id: string, read: number, title: string, description: string, updatedAt: any }> };
+export type BlogPostsQuery = { __typename?: 'Query', blogPosts: Array<{ __typename?: 'BlogPost', id: string, read: number, title: string, description: string, updatedAt: any, body: string, slug?: string | null }> };

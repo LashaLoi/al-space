@@ -21,6 +21,7 @@
       "@seo/*": ["lib/seo/*"],
       "@graphql/*": ["lib/graphql/*"],
       "@utils/*": ["lib/utils/*"],
+      "@hooks/*": ["lib/hooks/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

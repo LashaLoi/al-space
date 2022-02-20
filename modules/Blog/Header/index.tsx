@@ -38,7 +38,7 @@ export const BlogHeader: React.FC<BlogHeaderProps> = ({ handleBack }) => (
         delay: 0.4,
         duration: 0.4,
       }}
-      className="w-full bg-red-400 h-[1px] mt-2"
+      className="w-full bg-emerald-400 h-[1px] mt-2"
     />
     <FadeIn delay={0.3}>
       <div className="mt-6 flex items-center">
@@ -49,10 +49,10 @@ export const BlogHeader: React.FC<BlogHeaderProps> = ({ handleBack }) => (
         >
           <Image
             placeholder="blur"
-            blurDataURL="/assets/images/iam.jpeg"
+            blurDataURL="/assets/images/iam.JPG"
             width={80}
             height={80}
-            src="/assets/images/iam.jpeg"
+            src="/assets/images/iam.JPG"
             alt="iam"
           />
         </motion.div>

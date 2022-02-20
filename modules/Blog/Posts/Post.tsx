@@ -1,10 +1,12 @@
 import React from 'react'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { BlogPost } from '@graphql/index'
 import { formatDate } from '@utils/index'
-import { MDXRemote } from 'next-mdx-remote'
 
-interface PostProps extends BlogPost {}
+interface PostProps extends BlogPost {
+  playSound: () => void
+}
 
 const item = {
   hidden: { opacity: 0 },
@@ -16,15 +18,21 @@ export const Post: React.FC<PostProps> = ({
   read,
   title,
   updatedAt,
-  body,
+  slug,
+  playSound,
 }) => {
   const date = formatDate(updatedAt)
 
   return (
     <motion.div variants={item} className="mb-14">
-      <div className="sm:text-3xl text-xl text-red-400 font-bold cursor-pointer">
-        {title}
-      </div>
+      <Link href={`/blog/${slug}`}>
+        <div
+          onClick={playSound}
+          className="sm:text-3xl text-xl text-emerald-400 font-bold cursor-pointer"
+        >
+          {title}
+        </div>
+      </Link>
       <div className="flex align-center mt-2 sm:text-sm text-xs">
         <div className="mr-2">{date}</div>
         <div>-</div>

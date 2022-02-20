@@ -24,7 +24,7 @@ const BlogPage: NextPage<StaticProps> = ({ blogPosts }) => (
 
 export const getStaticProps = async () => {
   const { blogPosts }: StaticProps = await request(
-    'https://api-eu-central-1.graphcms.com/v2/ckybcz87919h501z228j68gpl/master',
+    process.env.NEXT_APP_GRAPHQL_ENDPOINT ?? '',
     BlogPostsQuery
   )
 

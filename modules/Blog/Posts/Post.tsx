@@ -1,24 +1,10 @@
-import React, { memo } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import { BlogPost } from '@graphql/index'
 import { formatDate } from '@utils/index'
+import { MDXRemote } from 'next-mdx-remote'
 
 interface PostProps extends BlogPost {}
-
-const monthNames = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-]
 
 const item = {
   hidden: { opacity: 0 },
@@ -33,8 +19,6 @@ export const Post: React.FC<PostProps> = ({
   body,
 }) => {
   const date = formatDate(updatedAt)
-
-  console.log({ body })
 
   return (
     <motion.div variants={item} className="mb-14">

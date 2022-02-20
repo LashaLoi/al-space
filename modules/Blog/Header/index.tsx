@@ -43,18 +43,17 @@ export const BlogHeader: React.FC<BlogHeaderProps> = ({ handleBack }) => (
     <FadeIn delay={0.3}>
       <div className="mt-6 flex items-center">
         <motion.div
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="sm:mr-8 mr-4 cursor-pointer"
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
+          className="sm:mr-8 mr-4 cursor-pointer flex justify-center align-center next-image-wrapper"
         >
           <Image
             placeholder="blur"
             blurDataURL="/assets/images/iam.jpeg"
-            width={65}
-            height={65}
+            width={80}
+            height={80}
             src="/assets/images/iam.jpeg"
             alt="iam"
-            className="rounded-full"
           />
         </motion.div>
         <div className="sm:text-lg text-base">

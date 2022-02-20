@@ -1,11 +1,15 @@
 import type { NextPage } from 'next'
-import { SEOHead } from '@seo/head'
 import { Home } from '@modules/Home'
 import { PageWrapper } from '@components/PageWrapper'
+import Head from 'next/head'
 
 const HomePage: NextPage = () => (
   <PageWrapper>
-    <SEOHead />
+    <Head>
+      <title>AL SPACE</title>
+      <meta name="description" content="All info about Aliaksei Loi" />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
     <Home />
   </PageWrapper>
 )

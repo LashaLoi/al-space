@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4dabb6a-5240-43d5-aa3a-1eb2d9d9816b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/components/CodeBlock.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/graphql/.graphqlconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/graphql/schema.graphql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/Navigation/components/audio.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/Navigation/components/audio.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/Navigation/icons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/Navigation/icons.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/Navigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/Navigation/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/PageWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/PageWrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/context/global.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/context/global.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/graphql/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/graphql/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/graphql/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/graphql/schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/hooks/useAudio.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/hooks/useAudio.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Blog/Post/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Blog/Post/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Blog/Posts/Post.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Blog/Articles/Article.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Blog/Posts/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Blog/Articles/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Blog/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Blog/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/blog/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blog/[slug].tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +63,9 @@
         <option name="url" value="https://github.com/LashaLoi/al-space.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -168,7 +153,7 @@
       <workItem from="1645431267127" duration="3000" />
       <workItem from="1645447667149" duration="1807000" />
       <workItem from="1645449490856" duration="18000" />
-      <workItem from="1645449520518" duration="10805000" />
+      <workItem from="1645449520518" duration="13403000" />
     </task>
     <servers />
   </component>

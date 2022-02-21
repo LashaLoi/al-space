@@ -7,6 +7,7 @@ interface PageWrapperProps extends HTMLAttributes<HTMLDivElement> {
     enter: Variant
     exit: Variant
   }
+  animate?: boolean
 }
 
 const defaultVariants = {
@@ -19,9 +20,10 @@ export const PageWrapper: React.FC<PageWrapperProps> = ({
   variants,
   children,
   className,
+  animate = true,
 }) => (
   <motion.div
-    variants={variants ?? defaultVariants}
+    variants={animate ? variants ?? defaultVariants : undefined}
     initial="hidden"
     animate="enter"
     exit="exit"

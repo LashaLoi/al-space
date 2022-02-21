@@ -1,18 +1,52 @@
 import React, {
   createContext,
   useState,
-  useCallback,
   useContext,
   useMemo,
+  useEffect,
+  useCallback,
 } from 'react'
 
-type GlobalStateContext = {}
+export const LS_KEY = 'audio-on'
 
-const GlobalStateContext = createContext<GlobalStateContext>({})
+export enum AudioOn {
+  YES = 'yes',
+  NO = 'no',
+}
+
+type GlobalStateContext = {
+  isAudioOn: boolean
+  toggleAudio: () => void
+}
+
+const GlobalStateContext = createContext<GlobalStateContext>({
+  isAudioOn: true,
+  toggleAudio: () => {},
+})
 
 export const GlobalStateProvider: React.FC = ({ children }) => {
+  const [isAudioOn, setIdAudioOn] = useState(true)
+
+  useEffect(() => {
+    const lsAudioOn = localStorage.getItem(LS_KEY)
+
+    if (lsAudioOn) {
+      setIdAudioOn(lsAudioOn === AudioOn.YES)
+    }
+  }, [])
+
+  const toggleAudio = useCallback(() => {
+    setIdAudioOn((isAudioOn) => {
+      const newState = !isAudioOn
+
+      localStorage.setItem(LS_KEY, newState ? AudioOn.YES : AudioOn.NO)
+
+      return newState
+    })
+  }, [])
+
   return (
-    <GlobalStateContext.Provider value={{}}>
+    <GlobalStateContext.Provider value={{ isAudioOn, toggleAudio }}>
       {children}
     </GlobalStateContext.Provider>
   )
@@ -22,9 +56,13 @@ export const useGlobalStateContext = () =>
   useContext<GlobalStateContext>(GlobalStateContext)
 
 export const useGlobalState = () => {
-  return useMemo(() => ({}), [])
+  const { isAudioOn } = useGlobalStateContext()
+
+  return useMemo(() => ({ isAudioOn }), [isAudioOn])
 }
 
 export const useGlobalStateApi = () => {
-  return useMemo(() => ({}), [])
+  const { toggleAudio } = useGlobalStateContext()
+
+  return useMemo(() => ({ toggleAudio }), [toggleAudio])
 }

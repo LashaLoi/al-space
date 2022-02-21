@@ -1,36 +1,24 @@
-import React, { memo, useCallback, useState } from 'react'
+import React, { memo, useCallback } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useTheme, useThemeApi } from 'lib/context/theme'
 
-import {
-  LightIcon,
-  DarkIcon,
-  LightBook,
-  DarkBook,
-  LightLearn,
-  DarkLearn,
-  DarkHome,
-  LightHome,
-} from './icons'
+import { SunIcon, MoonIcon, Book, Learn, Home } from './icons'
 import { useAudio } from '@hooks/useAudio'
 import { AudioIcon } from '@components/Navigation/components/audio'
 
 const pages = [
   {
     link: '/',
-    darkIcon: <DarkHome />,
-    lightIcon: <LightHome />,
+    icon: <Home />,
   },
   {
     link: '/blog',
-    darkIcon: <DarkLearn />,
-    lightIcon: <LightLearn />,
+    icon: <Learn />,
   },
   {
     link: '/cv',
-    darkIcon: <DarkBook />,
-    lightIcon: <LightBook />,
+    icon: <Book />,
   },
 ]
 
@@ -45,8 +33,7 @@ const Navigation: React.FC = () => {
 
   const handleThemeToggle = useCallback(() => {
     toggleTheme()
-
-    return playSound()
+    playSound()
   }, [toggleTheme, playSound])
 
   return (
@@ -61,18 +48,18 @@ const Navigation: React.FC = () => {
         {pages.map((page) => (
           <Link href={page.link} key={page.link}>
             <a className="flex justify-center items-center w-6 h-6 sm:mr-10 mr-0">
-              {isDark ? page.lightIcon : page.darkIcon}
+              {page.icon}
             </a>
           </Link>
         ))}
         <AudioIcon isMobile />
         <div className="sm:hidden block" onClick={handleThemeToggle}>
-          {isDark ? <LightIcon /> : <DarkIcon />}
+          {isDark ? <MoonIcon /> : <SunIcon />}
         </div>
       </div>
       <AudioIcon />
       <div className="sm:block hidden" onClick={handleThemeToggle}>
-        {isDark ? <LightIcon /> : <DarkIcon />}
+        {isDark ? <MoonIcon /> : <SunIcon />}
       </div>
     </div>
   )

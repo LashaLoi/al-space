@@ -3539,3 +3539,10 @@ export type BlogPostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type BlogPostsQuery = { __typename?: 'Query', blogPosts: Array<{ __typename?: 'BlogPost', id: string, read: number, title: string, description: string, updatedAt: any, body: string, slug?: string | null }> };
+
+export type BlogPostQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type BlogPostQuery = { __typename?: 'Query', blogPost?: { __typename?: 'BlogPost', title: string, updatedAt: any, body: string, read: number } | null };

@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useRef } from 'react'
+import { useGlobalState } from 'lib/context/global'
 
-export const useAudio = (url: string) => {
+export const useAudio = (url: string, ignoreLS = false) => {
+  const { isAudioOn } = useGlobalState()
   const audioRef = useRef<HTMLAudioElement>()
 
   useEffect(() => {
@@ -9,5 +11,20 @@ export const useAudio = (url: string) => {
     return () => audioRef.current?.pause()
   }, [])
 
-  return useCallback(() => audioRef.current?.play(), [audioRef.current])
+  return useCallback(() => {
+    if (!ignoreLS && !isAudioOn) {
+      return
+    }
+
+    if (!audioRef.current) {
+      return
+    }
+
+    if (!audioRef.current.paused) {
+      audioRef.current.pause()
+      audioRef.current.currentTime = 0
+    }
+
+    audioRef.current.play()
+  }, [isAudioOn, ignoreLS, audioRef.current])
 }

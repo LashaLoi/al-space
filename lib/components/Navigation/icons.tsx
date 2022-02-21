@@ -1,9 +1,8 @@
 import React from 'react'
 
-const sizeClass = 'h-6 w-6 hover:scale-110 cursor-pointer'
+const sizeClass = 'h-5 w-5 hover:scale-110 cursor-pointer'
 
-// Sun
-export const DarkIcon: React.FC = () => (
+export const SunIcon: React.FC = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className={sizeClass}
@@ -18,42 +17,18 @@ export const DarkIcon: React.FC = () => (
   </svg>
 )
 
-export const LightIcon: React.FC = () => (
+export const MoonIcon: React.FC = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className={sizeClass}
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
+    viewBox="0 0 20 20"
+    fill="currentColor"
   >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-    />
+    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
   </svg>
 )
 
-// Book
-export const LightBook: React.FC = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className={sizeClass}
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-    />
-  </svg>
-)
-
-export const DarkBook: React.FC = () => (
+export const Book: React.FC = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className={sizeClass}
@@ -64,8 +39,7 @@ export const DarkBook: React.FC = () => (
   </svg>
 )
 
-// Learn
-export const DarkLearn: React.FC = () => (
+export const Learn: React.FC = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className={sizeClass}
@@ -76,31 +50,10 @@ export const DarkLearn: React.FC = () => (
   </svg>
 )
 
-export const LightLearn: React.FC = () => (
+export const Home: React.FC = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className={sizeClass}
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
-    <path d="M12 14l9-5-9-5-9 5 9 5z" />
-    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-    />
-  </svg>
-)
-
-//Home
-
-export const DarkHome: React.FC = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className="h-5 w-5"
     viewBox="0 0 20 20"
     fill="currentColor"
   >
@@ -108,52 +61,10 @@ export const DarkHome: React.FC = () => (
   </svg>
 )
 
-export const LightHome: React.FC = () => (
+export const AudioOff: React.FC = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="h-6 w-6"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-    />
-  </svg>
-)
-
-// AudioOff
-export const LightAudioOff: React.FC = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className="h-6 w-6"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"
-      clipRule="evenodd"
-    />
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"
-    />
-  </svg>
-)
-
-export const DarkAudioOff: React.FC = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className="h-5 w-5"
+    className={sizeClass}
     viewBox="0 0 20 20"
     fill="currentColor"
   >
@@ -165,29 +76,10 @@ export const DarkAudioOff: React.FC = () => (
   </svg>
 )
 
-// AudioOn
-
-export const LightAudioOn: React.FC = () => (
+export const AudioOn: React.FC = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="h-6 w-6"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"
-    />
-  </svg>
-)
-
-export const DarkAudioOn: React.FC = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className="h-5 w-5"
+    className={sizeClass}
     viewBox="0 0 20 20"
     fill="currentColor"
   >

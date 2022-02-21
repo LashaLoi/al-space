@@ -13,3 +13,16 @@ export const BlogPostsQuery = gql`
     }
   }
 `
+
+export const BlogPostQuery = gql`
+  query BlogPost($slug: String!) {
+    blogPost(where: { slug: $slug }) {
+      title
+      updatedAt
+      body
+      read
+      slug
+      updatedAt
+    }
+  }
+`

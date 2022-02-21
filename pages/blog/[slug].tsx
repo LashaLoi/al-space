@@ -1,17 +1,58 @@
 import type { NextPage } from 'next'
-import { useRouter } from 'next/router'
+import { serialize } from 'next-mdx-remote/serialize'
+import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { PageWrapper } from '@components/PageWrapper'
 import Post from '@modules/Blog/Post'
+import { BlogPostsQuery, BlogPostQuery } from '@graphql/schema'
+import { request } from 'graphql-request'
+import { BlogPost } from '@graphql/index'
 
-const PostPage: NextPage = () => {
-  const { query } = useRouter()
-  const { slug } = query
+interface StaticProps {
+  post: BlogPost & { body: MDXRemoteSerializeResult }
+}
 
-  return (
-    <PageWrapper className="sm:pt-[80px] pt-0">
-      <Post slug={slug as string} />
-    </PageWrapper>
+const PostPage: NextPage<StaticProps> = ({ post }) => (
+  <PageWrapper className="sm:pt-[140px] pt-0">
+    <Post {...post} />
+  </PageWrapper>
+)
+
+export const getStaticPaths = async () => {
+  const { blogPosts }: { blogPosts: Array<BlogPost> } = await request(
+    process.env.NEXT_APP_GRAPHQL_ENDPOINT ?? '',
+    BlogPostsQuery
   )
+
+  const paths = blogPosts.map((post) => ({
+    params: { slug: post.slug },
+  }))
+
+  return { paths, fallback: false }
+}
+
+export const getStaticProps = async ({
+  params,
+}: {
+  params: { slug: string }
+}) => {
+  const { blogPost }: { blogPost: BlogPost } = await request(
+    process.env.NEXT_APP_GRAPHQL_ENDPOINT ?? '',
+    BlogPostQuery,
+    {
+      slug: params.slug,
+    }
+  )
+
+  const mdxSource = await serialize(blogPost.body)
+
+  return {
+    props: {
+      post: {
+        ...blogPost,
+        body: mdxSource,
+      },
+    },
+  }
 }
 
 export default PostPage

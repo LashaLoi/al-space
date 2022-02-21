@@ -13,7 +13,7 @@ const item = {
   show: { opacity: 1 },
 }
 
-export const Post: React.FC<PostProps> = ({
+export const Article: React.FC<PostProps> = ({
   description,
   read,
   title,
@@ -26,12 +26,12 @@ export const Post: React.FC<PostProps> = ({
   return (
     <motion.div variants={item} className="mb-14">
       <Link href={`/blog/${slug}`}>
-        <div
+        <motion.div
           onClick={playSound}
           className="sm:text-3xl text-xl text-emerald-400 font-bold cursor-pointer"
         >
           {title}
-        </div>
+        </motion.div>
       </Link>
       <div className="flex align-center mt-2 sm:text-sm text-xs">
         <div className="mr-2">{date}</div>

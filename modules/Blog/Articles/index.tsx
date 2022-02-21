@@ -2,7 +2,7 @@ import React, { memo, useCallback, useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { BlogPost } from '@graphql/index'
 import { useAudio } from '@hooks/useAudio'
-import { Post } from './Post'
+import { Article } from './Article'
 
 interface ArticlesProps {
   posts: Array<BlogPost>
@@ -29,7 +29,7 @@ const Articles: React.FC<ArticlesProps> = ({ posts }) => {
       className="mt-12 w-full"
     >
       {posts.map((post) => (
-        <Post key={post.id} {...post} playSound={playSound} />
+        <Article key={post.id} {...post} playSound={playSound} />
       ))}
     </motion.div>
   )

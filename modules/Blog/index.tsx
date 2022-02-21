@@ -3,7 +3,7 @@ import { BlogPost } from '@graphql/index'
 import { useRouter } from 'next/router'
 import { FadeIn } from 'lib/components/FadeIn'
 import { BlogHeader } from './Header'
-import Articles from './Posts'
+import Articles from './Articles'
 
 interface BlogProps {
   posts: Array<BlogPost>

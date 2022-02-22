@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4dabb6a-5240-43d5-aa3a-1eb2d9d9816b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/components/Navigation/components/audio.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/Navigation/components/audio.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/404.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/404.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/blog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/cv.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cv.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +156,9 @@
       <workItem from="1645431267127" duration="3000" />
       <workItem from="1645447667149" duration="1807000" />
       <workItem from="1645449490856" duration="18000" />
-      <workItem from="1645449520518" duration="13403000" />
+      <workItem from="1645449520518" duration="14279000" />
+      <workItem from="1645525649302" duration="1540000" />
+      <workItem from="1645544002684" duration="7089000" />
     </task>
     <servers />
   </component>

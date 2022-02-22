@@ -9,7 +9,7 @@ const variants = {
 
 const CVPage: NextPage = () => (
   <PageWrapper variants={variants} className="sm:pt-[80px] pt-0">
-    <div>CV Page</div>
+    <div>CV</div>
   </PageWrapper>
 )
 

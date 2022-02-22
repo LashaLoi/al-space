@@ -16,11 +16,13 @@ interface StaticProps {
   blogPosts: Array<BlogPost>
 }
 
-const BlogPage: NextPage<StaticProps> = ({ blogPosts }) => (
-  <PageWrapper variants={variants} className="sm:pt-[80px] pt-0">
-    <Blog posts={blogPosts} />
-  </PageWrapper>
-)
+const BlogPage: NextPage<StaticProps> = ({ blogPosts }) => {
+  return (
+    <PageWrapper variants={variants} className="sm:pt-[80px] pt-0">
+      <Blog posts={blogPosts} />
+    </PageWrapper>
+  )
+}
 
 export const getStaticProps = async () => {
   const { blogPosts }: StaticProps = await request(

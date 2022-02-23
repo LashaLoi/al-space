@@ -12,7 +12,7 @@ interface StaticProps {
 }
 
 const PostPage: NextPage<StaticProps> = ({ post }) => (
-  <PageWrapper className="sm:pt-[140px] pt-0">
+  <PageWrapper className="sm:py-[140px] pt-0 pb-20">
     <Post {...post} />
   </PageWrapper>
 )
@@ -43,7 +43,9 @@ export const getStaticProps = async ({
     }
   )
 
-  const mdxSource = await serialize(blogPost.body)
+  const mdxSource = await serialize(blogPost.body, {
+    mdxOptions: {},
+  })
 
   return {
     props: {

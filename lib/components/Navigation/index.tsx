@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useTheme, useThemeApi } from 'lib/context/theme'
 
-import { SunIcon, MoonIcon, Book, Learn, Home } from './icons'
+import { SunIcon, MoonIcon, Learn, Home } from './icons'
 import { useAudio } from '@hooks/useAudio'
 import { AudioIcon } from '@components/Navigation/components/audio'
 
@@ -16,10 +16,10 @@ const pages = [
     link: '/blog',
     icon: <Learn />,
   },
-  {
-    link: '/cv',
-    icon: <Book />,
-  },
+  // {
+  //   link: '/cv',
+  //   icon: <Book />,
+  // },
 ]
 
 const Navigation: React.FC = () => {

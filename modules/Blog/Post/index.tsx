@@ -1,9 +1,9 @@
 import React, { memo, useCallback } from 'react'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { BlogPost } from '@graphql/index'
 import { ArrowLeft } from '../icons'
-import { formatDate } from '@utils/index'
 
 interface PostProps extends Omit<BlogPost, 'body'> {
   body: MDXRemoteSerializeResult
@@ -12,8 +12,6 @@ interface PostProps extends Omit<BlogPost, 'body'> {
 const Post: React.FC<PostProps> = ({ title, body, read, updatedAt }) => {
   const router = useRouter()
   const handleBack = useCallback(() => router.back(), [])
-
-  const date = formatDate(updatedAt)
 
   return (
     <div className="flex flex-col justify-center items-center">
@@ -28,7 +26,12 @@ const Post: React.FC<PostProps> = ({ title, body, read, updatedAt }) => {
           </button>
         </div>
         <article className="prose dark:prose-invert">
-          <MDXRemote {...body} />
+          <MDXRemote
+            {...body}
+            components={{
+              a: (props) => <a {...props} className="text-slate-400" />,
+            }}
+          />
         </article>
       </div>
     </div>

@@ -6,6 +6,8 @@ import Post from '@modules/Blog/Post'
 import { BlogPostsQuery, BlogPostQuery } from '@graphql/schema'
 import { request } from 'graphql-request'
 import { BlogPost } from '@graphql/index'
+// @ts-ignore
+import remarkPrism from 'remark-prism'
 
 interface StaticProps {
   post: BlogPost & { body: MDXRemoteSerializeResult }
@@ -44,7 +46,9 @@ export const getStaticProps = async ({
   )
 
   const mdxSource = await serialize(blogPost.body, {
-    mdxOptions: {},
+    mdxOptions: {
+      remarkPlugins: [remarkPrism],
+    },
   })
 
   return {

@@ -30,6 +30,7 @@ const Post: React.FC<PostProps> = ({ title, body, read, updatedAt }) => {
             {...body}
             components={{
               a: (props) => <a {...props} className="text-slate-400" />,
+              img: (props) => <img {...props} className="rounded-md" />,
             }}
           />
         </article>

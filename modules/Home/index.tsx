@@ -10,6 +10,7 @@ export const Home: React.FC = () => (
         controls={false}
         loop
         muted
+        playsInline
         className="w-full h-full object-cover"
       >
         <source src="/assets/videos/home.mp4" type="video/mp4" />

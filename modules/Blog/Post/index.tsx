@@ -26,13 +26,7 @@ const Post: React.FC<PostProps> = ({ title, body, read, updatedAt }) => {
           </button>
         </div>
         <article className="prose dark:prose-invert">
-          <MDXRemote
-            {...body}
-            components={{
-              a: (props) => <a {...props} className="text-slate-400" />,
-              img: (props) => <img {...props} className="rounded-md" />,
-            }}
-          />
+          <MDXRemote {...body} />
         </article>
       </div>
     </div>

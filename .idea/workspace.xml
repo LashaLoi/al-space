@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4dabb6a-5240-43d5-aa3a-1eb2d9d9816b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/graphql/client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/components/PageWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/PageWrapper.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/Blog/Post/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Blog/Post/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Home/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/404.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/404.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/hello.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/revalidate.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/blog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/blog/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blog/[slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +95,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/node_modules/@mdx-js/react/index.d.ts" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/node_modules/@mdx-js/react/index.d.ts&#10;/Users/sideswipeloi/Documents/Frontend/al-space/.env.local" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -163,7 +170,10 @@
       <workItem from="1645624609187" duration="7965000" />
       <workItem from="1645783576942" duration="608000" />
       <workItem from="1646227224068" duration="1000" />
-      <workItem from="1646901274624" duration="27000" />
+      <workItem from="1646901274624" duration="86000" />
+      <workItem from="1646903805969" duration="3000" />
+      <workItem from="1648542313776" duration="948000" />
+      <workItem from="1648619761782" duration="2757000" />
     </task>
     <servers />
   </component>

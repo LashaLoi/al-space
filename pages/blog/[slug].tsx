@@ -4,9 +4,9 @@ import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { PageWrapper } from '@components/PageWrapper'
 import Post from '@modules/Blog/Post'
 import { BlogPostsQuery, BlogPostQuery } from '@graphql/schema'
-import { request } from 'graphql-request'
 import { BlogPost } from '@graphql/index'
-// @ts-ignore
+import { client } from '@graphql/client'
+// @ts-expect-error: not typed
 import remarkPrism from 'remark-prism'
 
 interface StaticProps {
@@ -20,8 +20,7 @@ const PostPage: NextPage<StaticProps> = ({ post }) => (
 )
 
 export const getStaticPaths = async () => {
-  const { blogPosts }: { blogPosts: Array<BlogPost> } = await request(
-    process.env.NEXT_APP_GRAPHQL_ENDPOINT ?? '',
+  const { blogPosts }: { blogPosts: Array<BlogPost> } = await client.request(
     BlogPostsQuery
   )
 
@@ -37,8 +36,7 @@ export const getStaticProps = async ({
 }: {
   params: { slug: string }
 }) => {
-  const { blogPost }: { blogPost: BlogPost } = await request(
-    process.env.NEXT_APP_GRAPHQL_ENDPOINT ?? '',
+  const { blogPost }: { blogPost: BlogPost } = await client.request(
     BlogPostQuery,
     {
       slug: params.slug,

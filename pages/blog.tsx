@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 import { PageWrapper } from '@components/PageWrapper'
-import { request } from 'graphql-request'
 import { BlogPostsQuery } from '@graphql/schema'
 import { BlogPost } from '@graphql/index'
+import { client } from '@graphql/client'
 
 import Blog from '@modules/Blog'
 
@@ -25,10 +25,7 @@ const BlogPage: NextPage<StaticProps> = ({ blogPosts }) => {
 }
 
 export const getStaticProps = async () => {
-  const { blogPosts }: StaticProps = await request(
-    process.env.NEXT_APP_GRAPHQL_ENDPOINT ?? '',
-    BlogPostsQuery
-  )
+  const { blogPosts }: StaticProps = await client.request(BlogPostsQuery)
 
   return {
     props: {

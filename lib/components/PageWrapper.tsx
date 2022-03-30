@@ -27,7 +27,7 @@ export const PageWrapper: React.FC<PageWrapperProps> = ({
     initial="hidden"
     animate="enter"
     exit="exit"
-    transition={{ duration: 0.4 }}
+    transition={{ duration: 0.3 }}
     className={className}
   >
     {children}

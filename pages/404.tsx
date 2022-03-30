@@ -205,22 +205,16 @@ const NotFoundPage: NextPage = () => (
       <circle cx="606.5" cy="114.5" r="11" fill="#34d399" />
     </svg>
     <div className="mt-4 text-center l">
-      <FadeIn delay={0.4}>
-        <div className="mb-6 sm:text-6xl text-4xl">404</div>
-      </FadeIn>
-      <FadeIn delay={0.6}>
-        <div className="mb-4 sm:text-lg text-sm max-w-[450px] mx-10">
-          The page you&apos;re looking for might be renamed, removed or might
-          never exists on this planet
-        </div>
-      </FadeIn>
-      <FadeIn delay={0.8}>
-        <Link href="/">
-          <a className="flex items-center justify-center text-emerald-400 hover:text-emerald-300">
-            <ArrowLeft /> BACK TO HOME PAGE
-          </a>
-        </Link>
-      </FadeIn>
+      <div className="mb-6 sm:text-6xl text-4xl">404</div>
+      <div className="mb-4 sm:text-lg text-sm max-w-[450px] mx-10">
+        The page you&apos;re looking for might be renamed, removed or might
+        never exists on this planet
+      </div>
+      <Link href="/">
+        <a className="flex items-center justify-center text-emerald-400 hover:text-emerald-300">
+          <ArrowLeft /> BACK TO HOME PAGE
+        </a>
+      </Link>
     </div>
   </PageWrapper>
 )

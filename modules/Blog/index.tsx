@@ -15,7 +15,7 @@ const Blog: React.FC<BlogProps> = ({ posts }) => {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="lg:lg:w-2/5 md:w-3/5 sm:w-5/6 w-full sm:p-0 p-4">
+      <div className="md:w-2/4 sm:w-5/6 w-full sm:p-0 p-4">
         <BlogHeader handleBack={handleBack} />
         <FadeIn delay={0.4}>
           <Articles posts={posts} />

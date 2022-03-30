@@ -22,7 +22,19 @@ export const BlogPostQuery = gql`
       body
       read
       slug
+      likes
       updatedAt
+    }
+  }
+`
+
+export const UpdateBlogPostLikes = gql`
+  mutation UpdateBlogPostLikes($slug: String!, $likes: Int!) {
+    updateBlogPost(where: { slug: $slug }, data: { likes: $likes }) {
+      likes
+    }
+    publishBlogPost(where: { slug: $slug }) {
+      id
     }
   }
 `

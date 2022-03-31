@@ -3,9 +3,11 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useTheme, useThemeApi } from 'lib/context/theme'
 
-import { SunIcon, MoonIcon, Learn, Home } from './icons'
+import { Learn, Home } from './icons'
 import { useAudio } from '@hooks/useAudio'
 import { AudioIcon } from '@components/Navigation/components/audio'
+import { LightIcon } from '@components/Navigation/components/light'
+import { AuthIcon } from '@components/Navigation/components/auth'
 
 const pages = [
   {
@@ -52,14 +54,20 @@ const Navigation: React.FC = () => {
             </a>
           </Link>
         ))}
+        <div className="sm:hidden block cursor-pointer">
+          <AuthIcon />
+        </div>
         <AudioIcon isMobile />
-        <div className="sm:hidden block" onClick={handleThemeToggle}>
-          {isDark ? <MoonIcon /> : <SunIcon />}
+        <div className="sm:hidden block">
+          <LightIcon isDark={isDark} onClick={handleThemeToggle} />
         </div>
       </div>
+      <div className="sm:block hidden mr-10 cursor-pointer">
+        <AuthIcon />
+      </div>
       <AudioIcon />
-      <div className="sm:block hidden" onClick={handleThemeToggle}>
-        {isDark ? <MoonIcon /> : <SunIcon />}
+      <div className="sm:block hidden">
+        <LightIcon isDark={isDark} onClick={handleThemeToggle} />
       </div>
     </div>
   )

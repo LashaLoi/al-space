@@ -5,13 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4dabb6a-5240-43d5-aa3a-1eb2d9d9816b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/modules/Blog/Post/icons.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firebase/auth.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firebase/clientApp.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/components/Navigation/components/auth.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/components/Navigation/components/light.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/context/user.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Auth/login.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/login.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/logout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/graphql/graphql.schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/lib/graphql/graphql.schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/graphql/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/graphql/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/graphql/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/graphql/schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/components/Navigation/icons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/Navigation/icons.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/components/Navigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/Navigation/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Blog/Post/icons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Blog/Post/icons.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/Blog/Post/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Blog/Post/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Blog/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Blog/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,6 +180,10 @@
       <workItem from="1648542313776" duration="948000" />
       <workItem from="1648619761782" duration="5963000" />
       <workItem from="1648638438924" duration="3338000" />
+      <workItem from="1648649588644" duration="1166000" />
+      <workItem from="1648652826079" duration="5012000" />
+      <workItem from="1648718605330" duration="3102000" />
+      <workItem from="1648724119715" duration="4746000" />
     </task>
     <servers />
   </component>

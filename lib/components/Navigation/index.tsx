@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useTheme, useThemeApi } from 'lib/context/theme'
 
-import { Learn, Home } from './icons'
+import { Learn, Home, Book } from './icons'
 import { useAudio } from '@hooks/useAudio'
 import { AudioIcon } from '@components/Navigation/components/audio'
 import { LightIcon } from '@components/Navigation/components/light'
@@ -15,13 +15,13 @@ const pages = [
     icon: <Home />,
   },
   {
+    link: '/cv',
+    icon: <Book />,
+  },
+  {
     link: '/blog',
     icon: <Learn />,
   },
-  // {
-  //   link: '/cv',
-  //   icon: <Book />,
-  // },
 ]
 
 const Navigation: React.FC = () => {

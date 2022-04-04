@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4dabb6a-5240-43d5-aa3a-1eb2d9d9816b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/CV/components/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/CV/components/hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
-    </list>
+    <list default="true" id="b4dabb6a-5240-43d5-aa3a-1eb2d9d9816b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -178,7 +174,7 @@
       <workItem from="1648929653857" duration="2636000" />
       <workItem from="1649058343317" duration="7733000" />
       <workItem from="1649090703611" duration="4603000" />
-      <workItem from="1649095319372" duration="767000" />
+      <workItem from="1649095319372" duration="888000" />
     </task>
     <servers />
   </component>

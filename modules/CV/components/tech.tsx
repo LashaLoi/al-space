@@ -5,7 +5,7 @@ export default function Tech() {
   return (
     <div className="flex flex-col justify-center align-center w-full">
       <h1 className="md:w-2/3 sm:w-2/3 w-full text-3xl mx-auto font-bold mb-10 text-center">
-        Stuck
+        Stack
       </h1>
       <div className="mx-auto px-10 mb-10">
         <div className="mb-8">
